@@ -6,7 +6,11 @@ use std::fs;
 use std::path::{Path, PathBuf};
 
 #[derive(Parser)]
-#[command(name = "cosmic-theme-import", version, about = "Lightweight CLI utility to import and export COSMIC desktop themes")]
+#[command(
+    name = "cosmic-theme-import",
+    version,
+    about = "Lightweight CLI utility to import and export COSMIC desktop themes"
+)]
 struct Cli {
     #[command(subcommand)]
     command: Command,
@@ -90,7 +94,7 @@ fn export_theme(path: &Path, dark: bool, light: bool) -> Result<()> {
         .with_context(|| format!("Failed to write theme to '{}'", path.display()))?;
 
     println!(
-        "Exported theme \"{}\" to: {}",
+        "Exported theme \"{}\" to {}",
         mode_name(is_dark),
         path.display()
     );
