@@ -16,6 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update && sudo apt-get install -y musl-tools
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${GITHUB_REF_NAME}" --verify-tag --title "${GITHUB_REF_NAME}" || true
       - uses: taiki-e/upload-rust-binary-action@v1
         with:
           bin: cosmic-theme-import
