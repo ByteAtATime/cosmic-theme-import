@@ -2,7 +2,7 @@
 
 A simple, lightweight CLI utility to import and export COSMIC desktop themes.
 
-This tool allows you to import a `.ron` COSMIC theme file (e.g. [COSMIC Themes](https://cosmic-themes.org/)) without being on COSMIC.
+This tool allows you to import a `.ron` COSMIC theme file (e.g. [COSMIC Themes](https://cosmic-themes.org/)) without being on COSMIC. Use cases include working on [libcosmic](https://github.com/pop-os/libcosmic) apps.
 
 ## Install
 
